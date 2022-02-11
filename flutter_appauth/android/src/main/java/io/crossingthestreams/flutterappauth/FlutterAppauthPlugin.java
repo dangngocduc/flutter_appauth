@@ -315,6 +315,8 @@ public class FlutterAppauthPlugin implements FlutterPlugin, MethodCallHandler, P
                         ResponseTypeValues.CODE,
                         Uri.parse(redirectUrl));
 
+        authRequestBuilder.setNonce(null);
+
         if (scopes != null && !scopes.isEmpty()) {
             authRequestBuilder.setScopes(scopes);
         }
